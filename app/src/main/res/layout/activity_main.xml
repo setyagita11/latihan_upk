@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAEDED"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inNis"
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg_edittxt"
+        android:ems="10"
+        android:hint="Nis"
+        android:inputType="number"
+        android:paddingLeft="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <EditText
+        android:id="@+id/inNma"
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_edittxt"
+        android:ems="10"
+        android:hint="Nama"
+        android:inputType="text"
+        android:paddingLeft="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inNis" />
+
+    <EditText
+        android:id="@+id/inKlas"
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_edittxt"
+        android:ems="10"
+        android:hint="Kelas"
+        android:inputType="text"
+        android:paddingLeft="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inNma" />
+
+    <EditText
+        android:id="@+id/inJurus"
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_edittxt"
+        android:ems="10"
+        android:hint="Jurusan"
+        android:inputType="text"
+        android:paddingLeft="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inKlas" />
+
+    <Button
+        android:id="@+id/btnSmpan"
+        android:layout_width="191dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#FD3030"
+        android:text="S I M P A N"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inJurus" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listData"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSmpan"
+        tools:listitem="@layout/adpter" />
+</androidx.constraintlayout.widget.ConstraintLayout>
